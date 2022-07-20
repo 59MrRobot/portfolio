@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './HomePage.scss';
 
-const techStack = ['React', 'TypeScript', 'JavaScript', 'HTML', 'SCSS'];
+// const techStack = ['React', 'TypeScript', 'JavaScript', 'HTML', 'SCSS'];
 
 export const HomePage: React.FC = () => {
   return (
@@ -10,7 +10,9 @@ export const HomePage: React.FC = () => {
       <div className="homepage__wrapper">
         <h1 className="homepage__title">Swazi Kunene</h1>
 
-        <ul className="homepage__tech">
+        <h2 className="homepage__subtitle">Junior Frontend Developer</h2>
+
+        {/* <ul className="homepage__tech">
           {techStack.map(tech => {
             return (
               <li key={tech}>
@@ -18,7 +20,7 @@ export const HomePage: React.FC = () => {
               </li>
             );
           })}
-        </ul>
+        </ul> */}
 
         <Link 
           to="projects"

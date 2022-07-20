@@ -1,0 +1,45 @@
+@import '../../styles/vars';
+@import '../../styles/fonts';
+
+.project {
+  display: flex;
+  flex-direction: column;
+
+  width: 350px;
+  padding: 16px;
+
+  border-radius: 20px;
+
+  background-color: $slate-gray;
+
+  @media (min-width: 768px) {
+    width: 350px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 325px;
+  }
+
+  &__image {
+    object-fit: cover;
+    height: 250px;
+    border-radius: 20px;
+  }
+
+  &__title {
+    margin-top: 4px;
+    width: max-content;
+
+    font-family: "Poppins SemiBold";
+
+    color: $raisin-black;
+  }
+
+  &__link {
+    margin-top: 8px;
+    font-family: "Poppins Medium";
+    text-decoration: none;
+
+    color: $bone;
+  }
+}

@@ -1,0 +1,68 @@
+@import '../../styles/vars';
+@import '../../styles/fonts';
+
+.projects {
+  height: 100%;
+  padding: 16px 0;
+
+  background-color: $isabelline;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    @media (min-width: 768px) {
+      padding: 0 32px;
+      // height: 100vh;
+    }
+  }
+
+  &__tech {
+    margin-top: 16px;
+  
+    &-title {
+      font-family: "Poppins SemiBold";
+      text-align: center;
+    }
+
+    &-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      font-family: "Poppins Medium";
+
+      @media (min-width: 768px) {
+        font-size: 1em;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 2.5em;
+    font-family: "Edu Vic", sans-serif;
+
+    color: $raisin-black;
+    text-transform: uppercase;
+
+    @media (min-width: 768px) {
+      font-size: 3em;
+    }
+  }
+}
