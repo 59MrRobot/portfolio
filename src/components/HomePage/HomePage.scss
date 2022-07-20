@@ -1,0 +1,94 @@
+@import '../../styles/vars';
+@import '../../styles/fonts';
+
+.homepage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $raisin-black;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 16px;
+
+    color: $isabelline;
+  }
+
+  &__title {
+    margin: 0;
+
+    font-size: 2.5em;
+    font-family: "Edu Vic", sans-serif;
+
+    @media (min-width: 768px) {
+      font-size: 4em;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 6em;
+    }
+  }
+
+  &__tech {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    font-size: 0.75em;
+    font-family: "Poppins";
+    font-weight: 600;
+
+    @media (min-width: 768px) {
+      font-size: 1em;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 1.5em;
+    }
+  }
+
+  &__link {
+    margin-top: 16px;
+    padding: 8px 16px;
+
+    border: 2px solid $argentinian-blue;
+    border-radius: 20px;
+
+    color: $argentinian-blue;
+    text-decoration: none;
+
+    @media (min-width: 768px) {
+      margin-top: 24px;
+      padding: 16px 24px;
+
+      border-radius: 40px;
+
+      font-size: 1.25em;
+    }
+
+    @media (min-width: 1024px) {
+      margin-top: 32px;
+      padding: 24px 32px;
+
+      border-radius: 60px;
+
+      font-size: 1.5em;
+    }
+  }
+}
