@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "./static/css/main.2d2bf08f.css",
+    "main.js": "./static/js/main.9efc0824.js",
+    "static/media/Poppins-Medium.ttf": "./static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
+    "static/media/Poppins-SemiBold.ttf": "./static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
+    "static/media/EduVICWANTBeginner-VariableFont_wght.ttf": "./static/media/EduVICWANTBeginner-VariableFont_wght.6ba3877fd8693a74df58.ttf",
+    "index.html": "./index.html",
+    "main.2d2bf08f.css.map": "./static/css/main.2d2bf08f.css.map",
+    "main.9efc0824.js.map": "./static/js/main.9efc0824.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d2bf08f.css",
+    "static/js/main.9efc0824.js"
+  ]
+}
