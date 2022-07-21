@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "./static/css/main.f37b0bb0.css",
-    "main.js": "./static/js/main.0362c5c4.js",
+    "main.css": "./static/css/main.1db936f1.css",
+    "main.js": "./static/js/main.cbb95ba4.js",
     "static/media/Poppins-Medium.ttf": "./static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
     "static/media/Poppins-SemiBold.ttf": "./static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
     "static/media/EduVICWANTBeginner-VariableFont_wght.ttf": "./static/media/EduVICWANTBeginner-VariableFont_wght.6ba3877fd8693a74df58.ttf",
     "index.html": "./index.html",
-    "main.f37b0bb0.css.map": "./static/css/main.f37b0bb0.css.map",
-    "main.0362c5c4.js.map": "./static/js/main.0362c5c4.js.map"
+    "main.1db936f1.css.map": "./static/css/main.1db936f1.css.map",
+    "main.cbb95ba4.js.map": "./static/js/main.cbb95ba4.js.map"
   },
   "entrypoints": [
-    "static/css/main.f37b0bb0.css",
-    "static/js/main.0362c5c4.js"
+    "static/css/main.1db936f1.css",
+    "static/js/main.cbb95ba4.js"
   ]
 }
