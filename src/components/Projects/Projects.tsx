@@ -1,6 +1,8 @@
 import React from 'react';
 import { ProjectsList } from '../ProjectsList';
 import './Projects.scss';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const projects = [
   {
@@ -20,30 +22,39 @@ const projects = [
   },
 ];
 
-const techStack = ['React', 'TypeScript', 'JavaScript', 'HTML', 'SCSS'];
+
 
 export const Projects: React.FC = () => {
   return (
-    <div className="projects">
-      <div className="projects__wrapper">
+    <motion.div 
+      className="projects"
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      exit={{opacity: 0}}
+      transition={{duration: 1}}
+    >
+      <motion.div 
+        className="projects__controls"
+        initial={{left: "-100%"}}
+        animate={{left: 0}}
+        transition={{duration: 1}}
+      >
+        <Link to="/">
+          <img 
+            src={`${process.env.PUBLIC_URL}/images/home.svg`} 
+            alt="home icon"
+            className="home-icon"
+          />
+        </Link>
+
         <h1 className="projects__title">Projects</h1>
 
+        <div></div>
+      </motion.div>
+
+      <div className="projects__wrapper">
         <ProjectsList projects={projects} />
-
-        <div className="projects__tech">
-          <h2 className="projects__tech-title">Technology Stack:</h2>
-
-          <ul className="projects__tech-list">
-            {techStack.map(tech => {
-              return (
-                <li key={tech}>
-                  {tech}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
       </div>
-    </div>
+    </motion.div>
   )
 }

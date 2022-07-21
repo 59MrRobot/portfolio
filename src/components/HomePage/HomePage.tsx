@@ -1,26 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './HomePage.scss';
-
-// const techStack = ['React', 'TypeScript', 'JavaScript', 'HTML', 'SCSS'];
+import { motion } from 'framer-motion';
 
 export const HomePage: React.FC = () => {
   return (
-    <div className="homepage">
+    <motion.div
+      className="homepage"
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      exit={{opacity: 0}}
+      transition={{duration: 1}}
+    >
       <div className="homepage__wrapper">
-        <h1 className="homepage__title">Swazi Kunene</h1>
+        <Link to="about" className="homepage__title-link">
+          <motion.h1 
+            className="homepage__title"
+            whileHover={{
+              left: "25%",
+              transition: {duration: 0.5}
+            }}
+          >
+            Swazi Kunene
+          </motion.h1>
+        </Link>
 
         <h2 className="homepage__subtitle">Junior Frontend Developer</h2>
-
-        {/* <ul className="homepage__tech">
-          {techStack.map(tech => {
-            return (
-              <li key={tech}>
-                {tech}
-              </li>
-            );
-          })}
-        </ul> */}
 
         <Link 
           to="projects"
@@ -29,6 +34,6 @@ export const HomePage: React.FC = () => {
           Projects
         </Link>
       </div>
-    </div>
+    </motion.div>
   )
 }

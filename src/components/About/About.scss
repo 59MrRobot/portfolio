@@ -1,0 +1,148 @@
+@import '../../styles/vars';
+@import '../../styles/fonts';
+
+.about {
+  height: 100vh;
+  padding: 16px 0;
+
+  overflow-y: auto;
+
+  background-color: $raisin-black;
+
+  @media (min-width: 768px) {
+    height: 100vh;
+  }
+
+  &__wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    font-family: "Poppins Medium", sans-serif;
+    color: $isabelline;
+
+    @media (min-width: 768px) {
+      padding: 0 32px;
+    }
+  }
+
+  &__controls {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 16px;
+
+    @media (min-width: 768px) {
+      padding: 0 24px;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 0 32px;
+    }
+  }
+
+  &__title {
+    font-family: "Edu Vic", sans-serif;
+    color: $isabelline;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      font-size: 3em;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 4em;
+    }
+  }
+
+  &__tech {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0;
+
+    font-family: "Poppins SemiBold";
+
+    color: $bone;
+
+    @media (min-width: 768px) {
+      gap: 16px;
+      margin: 40px 0 0;
+
+      font-size: 1.25em;
+    }
+
+    @media (min-width: 1024px) {
+      gap: 24px;
+      margin: 24px 0 0;
+
+      font-size: 1.6em;
+    }
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin: 24px 0 0;
+    color: $isabelline;
+
+    @media (min-width: 768px) {
+      gap: 24px;
+      margin: 40px 0 0;
+
+      font-size: 1.25em;
+    }
+
+    @media (min-width: 1024px) {
+      gap: 16px;
+
+      font-size: 1.3em;
+    }
+  }
+
+  &__text {
+    position: relative;
+
+    &-large {
+      font-size: 1.25em;
+      font-weight: 600;
+    }
+
+    &-small {
+      font-size: 0.8em;
+    }
+  }
+
+  &__cv {
+    position: relative;
+    display: inline-block;
+    margin-top: 16px;
+
+    @media (min-width: 768px) {
+      margin-top: 40px;
+
+      font-size: 1.25em;
+    }
+
+    @media (min-width: 1024px) {
+      margin-top: 24px;
+
+      font-size: 1.35em;
+    }
+  }
+}
+
+.link {
+  color: $argentinian-blue;
+  text-decoration: none;
+}

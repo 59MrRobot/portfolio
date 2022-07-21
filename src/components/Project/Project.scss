@@ -2,6 +2,7 @@
 @import '../../styles/fonts';
 
 .project {
+  position: relative;
   display: flex;
   flex-direction: column;
 
@@ -11,6 +12,7 @@
   border-radius: 20px;
 
   background-color: $slate-gray;
+  text-decoration: none;
 
   @media (min-width: 768px) {
     width: 350px;
@@ -27,12 +29,16 @@
   }
 
   &__title {
-    margin-top: 4px;
+    margin-top: 8px;
     width: max-content;
 
     font-family: "Poppins SemiBold";
 
-    color: $raisin-black;
+    color: $bone;
+
+    @media (min-width: 1024px) {
+      font-size: 1.4em;
+    }
   }
 
   &__link {

@@ -2,19 +2,35 @@
   margin: 32px 0 0;
   padding: 0;
 
+  height: 100%;
+
   display: grid;
   grid-template-columns: 1fr;
+  justify-content: center;
+  align-content: center;
   row-gap: 16px;
 
   list-style: none;
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 16px;
+    margin: 64px 0 0;
   }
 
   @media (min-width: 1024px) {
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 8px;
+    column-gap: 24px;
+    margin: 0;
+  }
+
+  &__item {
+    transition: transform 0.5s linear;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__link {
+    text-decoration: none;
   }
 }

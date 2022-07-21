@@ -28,6 +28,7 @@
   }
 
   &__title {
+    position: relative;
     font-size: 2.5em;
     font-family: "Edu Vic", sans-serif;
 
@@ -37,6 +38,11 @@
 
     @media (min-width: 1024px) {
       font-size: 6em;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: $isabelline;
     }
   }
 
@@ -65,6 +71,12 @@
     color: $argentinian-blue;
     text-decoration: none;
     text-transform: uppercase;
+
+    transition: transform 0.5s linear;
+
+    &:hover {
+      transform: scale(1.1);
+    }
 
     @media (min-width: 768px) {
       margin-top: 24px;
