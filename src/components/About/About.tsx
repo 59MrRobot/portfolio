@@ -94,7 +94,7 @@ export const About: React.FC = () => {
         </div>
 
         <motion.a 
-          href="../../files/Swazi_Kunene_CV.pdf"
+          href="./Swazi_Kunene_CV.pdf"
           target="_blank"
           className="link about__cv"
           initial={{right: "-100%"}}
