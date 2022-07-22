@@ -2,6 +2,7 @@ import React from 'react';
 import './About.scss';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+// import Pdf from './Swazi_Kunene_CV.pdf';
 
 const techStack = ['React', 'TypeScript', 'JavaScript', 'HTML', 'SCSS'];
 
@@ -94,7 +95,7 @@ export const About: React.FC = () => {
         </div>
 
         <motion.a 
-          href="./Swazi_Kunene_CV.pdf"
+          href={require('./Swazi_Kunene_CV.pdf')}
           target="_blank"
           className="link about__cv"
           initial={{right: "-100%"}}

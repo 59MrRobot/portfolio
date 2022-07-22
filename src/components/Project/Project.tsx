@@ -20,14 +20,6 @@ export const Project: React.FC<Props> = ({ project }) => {
         className="project__image" 
       />
       <h2 className="project__title">{project.name}</h2>
-      {/* <a 
-        href={project.url} 
-        target="_blank" 
-        rel="noreferrer"
-        className="project__link"
-      >
-        View
-      </a> */}
     </motion.div>
   )
 }
