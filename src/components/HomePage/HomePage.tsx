@@ -1,28 +1,54 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './HomePage.scss';
-import { motion } from 'framer-motion';
+import { gsap, Power3 } from "gsap";
 
 export const HomePage: React.FC = () => {
+  let title = useRef<HTMLHeadingElement | null>(null);
+  let container = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (container.current) {
+      gsap.to(container.current, 
+        {
+          opacity: 1,
+          duration: 2,
+          ease: Power3.easeOut,
+        })
+    }
+  }, []);
+
   return (
-    <motion.div
+    <div
       className="homepage"
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
-      exit={{opacity: 0}}
-      transition={{duration: 1}}
+      ref={container}
     >
       <div className="homepage__wrapper">
         <Link to="about" className="homepage__title-link">
-          <motion.h1 
+          <h1
+            ref={title}
             className="homepage__title"
-            whileHover={{
-              left: "25%",
-              transition: {duration: 0.5}
+            onMouseEnter={() => {
+              if (title.current) {
+                gsap.to(title.current, 
+                  {
+                    left: '25%',
+                    duration: 0.5,
+                  })
+              }
+            }}
+            onMouseLeave={() => {
+              if (title.current) {
+                gsap.to(title.current, 
+                  {
+                    left: 0,
+                    duration: 0.5,
+                  })
+              }
             }}
           >
             Swazi Kunene
-          </motion.h1>
+          </h1>
         </Link>
 
         <h2 className="homepage__subtitle">Junior Frontend Developer</h2>
@@ -34,6 +60,6 @@ export const HomePage: React.FC = () => {
           Projects
         </Link>
       </div>
-    </motion.div>
+    </div>
   )
 }

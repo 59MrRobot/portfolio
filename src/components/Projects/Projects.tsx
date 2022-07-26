@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ProjectsList } from '../ProjectsList';
 import './Projects.scss';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { gsap, Power3 } from "gsap";
 
 const projects = [
   {
-    name: 'MyBiKE Landing Page',
-    url: 'https://59mrrobot.github.io/mybike-landing-page/',
-    thumbnail: 'mybike.png',
+    name: 'React Wordle',
+    url: 'https://59mrrobot.github.io/wordle-project/',
+    thumbnail: 'wordle.png',
   },
   {
     name: 'Kickstarter Landing Page',
@@ -16,28 +16,44 @@ const projects = [
     thumbnail: 'kickstarter.png',
   },
   {
-    name: 'React Wordle',
-    url: 'https://59mrrobot.github.io/wordle-project/',
-    thumbnail: 'wordle.png',
+    name: 'MyBiKE Landing Page',
+    url: 'https://59mrrobot.github.io/mybike-landing-page/',
+    thumbnail: 'mybike.png',
   },
 ];
 
-
-
 export const Projects: React.FC = () => {
+  let container = useRef<HTMLDivElement | null>(null);
+  let controls = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (container.current) {
+      gsap.to(container.current, 
+        {
+          opacity: 1,
+          duration: 2,
+          ease: Power3.easeOut,
+        })
+    }
+
+    if (controls.current) {
+      gsap.to(controls.current, 
+        {
+          left: 0,
+          duration: 2,
+          ease: Power3.easeOut,
+        })
+    }
+  }, []);
+
   return (
-    <motion.div 
+    <div 
       className="projects"
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
-      exit={{opacity: 0}}
-      transition={{duration: 1}}
+      ref={container}
     >
-      <motion.div 
+      <div 
         className="projects__controls"
-        initial={{left: "-100%"}}
-        animate={{left: 0}}
-        transition={{duration: 1}}
+        ref={controls}
       >
         <Link to="/">
           <img 
@@ -50,11 +66,11 @@ export const Projects: React.FC = () => {
         <h1 className="projects__title">Projects</h1>
 
         <div></div>
-      </motion.div>
+      </div>
 
       <div className="projects__wrapper">
         <ProjectsList projects={projects} />
       </div>
-    </motion.div>
+    </div>
   )
 }

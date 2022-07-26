@@ -5,6 +5,7 @@
   height: 100%;
   padding: 16px 0;
 
+  opacity: 0;
   overflow: hidden;
 
   background-color: $raisin-black;
@@ -26,6 +27,7 @@
 
   &__controls {
     position: relative;
+    left: -100%;
 
     display: flex;
     justify-content: space-between;

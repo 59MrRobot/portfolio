@@ -28,6 +28,7 @@
 
   &__controls {
     position: relative;
+    left: -100%;
 
     display: flex;
     justify-content: space-between;
@@ -60,6 +61,8 @@
 
   &__tech {
     position: relative;
+    left: -100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,6 +115,7 @@
 
   &__text {
     position: relative;
+    right: -100%;
 
     &-large {
       font-size: 1.25em;
@@ -125,6 +129,8 @@
 
   &__cv {
     position: relative;
+    right: -100%;
+
     display: inline-block;
     margin-top: 16px;
 

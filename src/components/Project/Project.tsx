@@ -1,25 +1,35 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Project.scss';
-import { motion } from 'framer-motion';
+import { gsap, Power3 } from "gsap";
 
 interface Props {
   project: Project;
 }
 
 export const Project: React.FC<Props> = ({ project }) => {
+  let container = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (container.current) {
+      gsap.to(container.current, 
+        {
+          right: 0,
+          duration: 2,
+          ease: Power3.easeOut,
+        })
+    }
+  }, []);
 
   return (
-    <motion.div 
+    <div 
       className="project"
-      initial={{right: "-100%"}}
-      animate={{right: 0}}
-      transition={{duration: 1, ease: "easeInOut"}}
+      ref={container}
     >
       <img 
         src={`${process.env.PUBLIC_URL}/images/${project.thumbnail}`} alt="project thumbnail"
         className="project__image" 
       />
       <h2 className="project__title">{project.name}</h2>
-    </motion.div>
+    </div>
   )
 }
