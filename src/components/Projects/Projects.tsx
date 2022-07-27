@@ -3,74 +3,81 @@ import { ProjectsList } from '../ProjectsList';
 import './Projects.scss';
 import { Link } from 'react-router-dom';
 import { gsap, Power3 } from "gsap";
+import { Particles } from '../Particles';
 
 const projects = [
   {
-    name: 'React Wordle',
+    name: 'Wordle',
+    type: "App",
     url: 'https://59mrrobot.github.io/wordle-project/',
     thumbnail: 'wordle.png',
   },
   {
-    name: 'Kickstarter Landing Page',
+    name: 'Kickstarter',
+    type: "Landing Page",
     url: 'https://59mrrobot.github.io/kickstarter-landing-page/',
     thumbnail: 'kickstarter.png',
   },
   {
-    name: 'MyBiKE Landing Page',
+    name: 'MyBiKE',
+    type: "Landing Page",
     url: 'https://59mrrobot.github.io/mybike-landing-page/',
     thumbnail: 'mybike.png',
   },
 ];
 
-export const Projects: React.FC = () => {
-  let container = useRef<HTMLDivElement | null>(null);
-  let controls = useRef<HTMLDivElement | null>(null);
+export const Projects: React.FC = React.memo(
+  () => {
+    let container = useRef<HTMLDivElement | null>(null);
+    let controls = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    if (container.current) {
-      gsap.to(container.current, 
-        {
-          opacity: 1,
-          duration: 2,
-          ease: Power3.easeOut,
-        })
-    }
+    useEffect(() => {
+      if (container.current) {
+        gsap.to(container.current, 
+          {
+            opacity: 1,
+            duration: 2,
+            ease: Power3.easeOut,
+          })
+      }
 
-    if (controls.current) {
-      gsap.to(controls.current, 
-        {
-          left: 0,
-          duration: 2,
-          ease: Power3.easeOut,
-        })
-    }
-  }, []);
+      if (controls.current) {
+        gsap.to(controls.current, 
+          {
+            left: 0,
+            duration: 2,
+            ease: Power3.easeOut,
+          })
+      }
+    }, []);
 
-  return (
-    <div 
-      className="projects"
-      ref={container}
-    >
+    return (
       <div 
-        className="projects__controls"
-        ref={controls}
+        className="projects"
+        ref={container}
       >
-        <Link to="/">
-          <img 
-            src={`${process.env.PUBLIC_URL}/images/home.svg`} 
-            alt="home icon"
-            className="home-icon"
-          />
-        </Link>
+        <Particles />
+        <div 
+          className="projects__controls"
+          ref={controls}
+        >
+          <Link to="/">
+            <img 
+              src={`${process.env.PUBLIC_URL}/images/home.svg`} 
+              alt="home icon"
+              className="home-icon"
+            />
+          </Link>
 
-        <h1 className="projects__title">Projects</h1>
+          <h1 className="projects__title">Projects</h1>
 
-        <div></div>
+          <div></div>
+        </div>
+
+        <div className="projects__wrapper">
+          <ProjectsList projects={projects} />
+        </div>
       </div>
-
-      <div className="projects__wrapper">
-        <ProjectsList projects={projects} />
-      </div>
-    </div>
-  )
-}
+    );
+  }
+);

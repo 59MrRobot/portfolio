@@ -26,11 +26,11 @@
   &__item {
     width: max-content;
 
-    transition: transform 0.5s linear;
+    // transition: transform 0.5s linear;
 
-    &:hover {
-      transform: scale(1.1);
-    }
+    // &:hover {
+    //   transform: scale(1.1);
+    // }
   }
 
   &__link {

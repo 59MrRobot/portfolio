@@ -59,6 +59,12 @@
     }
   }
 
+  &__me {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+
   &__tech {
     position: relative;
     left: -100%;

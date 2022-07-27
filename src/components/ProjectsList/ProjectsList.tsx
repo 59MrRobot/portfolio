@@ -6,8 +6,8 @@ interface Props {
   projects: Project[];
 }
 
-export const ProjectsList: React.FC<Props> = ({ projects }) => {
-  return (
+export const ProjectsList: React.FC<Props> = React.memo(
+  ({ projects }) => (
     <ul className="projects-list">
       {projects.map(project => (
         <li key={project.name} className="projects-list__item">
@@ -23,4 +23,5 @@ export const ProjectsList: React.FC<Props> = ({ projects }) => {
       ))}
     </ul>
   )
-}
+);
+
