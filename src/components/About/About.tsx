@@ -132,7 +132,7 @@ export const About: React.FC = React.memo(
               className="about__text about__text-small"
               ref={para5}
             >
-              I am a huge consumer of music, I'd be lying if I said I didn't listen to it 24/7, and sometimes when I'm not building web pages, I'm making <a target="_blank" href="https://soundcloud.com/s_k_music" rel="noreferrer" className="link">my own music</a>, for myself. I'm also a huge football fan - my favourite club being Arsenal FC.
+              <strong>A little extra about me</strong> - I am a huge consumer of music, I'd be lying if I said I didn't listen to it 24/7, and sometimes when I'm not building web pages, I'm making <a target="_blank" href="https://soundcloud.com/s_k_music" rel="noreferrer" className="link">my own music</a>. I'm also a huge football fan - my favourite club being Arsenal FC.
             </p>
           </div>
 

@@ -7,7 +7,7 @@ import { Projects } from './components/Projects';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <div className="app">
       <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="projects" element={<Projects />} />

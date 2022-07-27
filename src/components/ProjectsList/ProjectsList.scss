@@ -19,18 +19,12 @@
   @media (min-width: 1024px) {
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
-    column-gap: 24px;
+    column-gap: 32px;
     margin: 0;
   }
 
   &__item {
     width: max-content;
-
-    // transition: transform 0.5s linear;
-
-    // &:hover {
-    //   transform: scale(1.1);
-    // }
   }
 
   &__link {
