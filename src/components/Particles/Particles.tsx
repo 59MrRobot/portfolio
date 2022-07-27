@@ -29,7 +29,8 @@ export const Particles: React.FC = React.memo(
         if (w && h) {
           gsap.set(particle, {
             x: gsap.utils.random(0, w),
-            y: gsap.utils.random(0, h) - (h - 0.5),
+            // y: gsap.utils.random(0, h) - (h - 0.5),
+            y: gsap.utils.random(0, h),
             scale: gsap.utils.random(0.5, 1),
             backgroundColor: gsap.utils.random(particleColors),
           })
@@ -52,10 +53,11 @@ export const Particles: React.FC = React.memo(
   }
 );
 
-function animate(particle: HTMLDivElement, h: number | undefined) {
+function animate(particle: HTMLDivElement, h: number) {
   gsap.to(particle, {
-    y: h,
-    duration: gsap.utils.random(5, 10),
+    // y: h,
+    y: gsap.utils.random(0, h),
+    duration: gsap.utils.random(10, 20),
     ease: 'none', 
     repeat: -1,
     delay: -10,
@@ -63,7 +65,7 @@ function animate(particle: HTMLDivElement, h: number | undefined) {
 
   gsap.to(particle, {
     x: '+=50',
-    duration: gsap.utils.random(1, 6),
+    duration: gsap.utils.random(5, 10),
     ease: Power1.easeInOut, 
     repeat: -1,
     yoyo: true,
