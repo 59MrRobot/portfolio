@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.7e62a0cf.css",
-    "main.js": "./static/js/main.e4e5d56b.js",
+    "main.css": "./static/css/main.46af2bf2.css",
+    "main.js": "./static/js/main.7753a97b.js",
     "static/media/Poppins-Medium.ttf": "./static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
     "static/media/Poppins-SemiBold.ttf": "./static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
     "static/media/Swazi_Kunene_CV.pdf": "./static/media/Swazi_Kunene_CV.b459bddbcb1a8149b3db.pdf",
     "static/media/EduVICWANTBeginner-VariableFont_wght.ttf": "./static/media/EduVICWANTBeginner-VariableFont_wght.6ba3877fd8693a74df58.ttf",
     "index.html": "./index.html",
-    "main.7e62a0cf.css.map": "./static/css/main.7e62a0cf.css.map",
-    "main.e4e5d56b.js.map": "./static/js/main.e4e5d56b.js.map"
+    "main.46af2bf2.css.map": "./static/css/main.46af2bf2.css.map",
+    "main.7753a97b.js.map": "./static/js/main.7753a97b.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e62a0cf.css",
-    "static/js/main.e4e5d56b.js"
+    "static/css/main.46af2bf2.css",
+    "static/js/main.7753a97b.js"
   ]
 }
