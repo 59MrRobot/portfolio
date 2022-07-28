@@ -34,20 +34,18 @@ export const HomePage: React.FC = React.memo(
               className="homepage__title"
               onMouseEnter={() => {
                 if (title.current) {
-                  gsap.to(title.current, 
-                    {
-                      left: '25%',
-                      duration: 0.5,
-                    })
+                  gsap.to(title.current, {
+                    left: '25%',
+                    duration: 0.5,
+                  });
                 }
               }}
               onMouseLeave={() => {
                 if (title.current) {
-                  gsap.to(title.current, 
-                    {
-                      left: 0,
-                      duration: 0.5,
-                    })
+                  gsap.to(title.current, {
+                    left: 0,
+                    duration: 0.5,
+                  })
                 }
               }}
             >

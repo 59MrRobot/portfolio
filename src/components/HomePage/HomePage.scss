@@ -43,6 +43,10 @@
       font-size: 6em;
     }
 
+    &--about {
+      display: none;
+    }
+
     &-link {
       text-decoration: none;
       color: $isabelline;
@@ -75,10 +79,16 @@
     text-decoration: none;
     text-transform: uppercase;
 
-    transition: transform 0.5s linear;
+    transition: transform 0.25s linear,
+      background-color 0.25s linear, 
+      color 0.25s linear, 
+      border 0.25s linear;
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
+      background-color: $argentinian-blue;
+      color: $raisin-black;
+      border: 2px solid $raisin-black;
     }
 
     @media (min-width: 768px) {
