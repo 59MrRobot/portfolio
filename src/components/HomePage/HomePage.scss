@@ -31,10 +31,7 @@
   }
 
   &__gif {
-    position: absolute;
-    left: 50px;
-    top: 50%;
-    transform: translateY(-50%) rotate(-30deg);
+    transform: rotate(30deg);
 
     display: none;
 

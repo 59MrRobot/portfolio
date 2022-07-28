@@ -30,45 +30,42 @@ export const HomePage: React.FC = React.memo(
         <Particles />
         <div className="homepage__wrapper">
           <Link to="about" className="homepage__title-link">
-            <div className="homepage__title-container">
+            <h1
+              ref={title}
+              className="homepage__title"
+              onMouseEnter={() => {
+                if (title.current && gif.current) {
+                  gsap.to(title.current, {
+                    left: '25%',
+                    duration: 0.5,
+                  });
+
+                  gsap.to(gif.current, {
+                    display: "unset",
+                  })
+                }
+              }}
+              onMouseLeave={() => {
+                if (title.current && gif.current) {
+                  gsap.to(title.current, {
+                    left: 0,
+                    duration: 0.5,
+                  })
+
+                  gsap.to(gif.current, {
+                    display: "none",
+                  })
+                }
+              }}
+            >
               <img
                 ref={gif}
                 src={`${process.env.PUBLIC_URL}/images/tap-unscreen.gif`}
                 alt="d"
                 className="homepage__gif"
               />
-              <h1
-                ref={title}
-                className="homepage__title"
-                onMouseEnter={() => {
-                  if (title.current && gif.current) {
-                    gsap.to(title.current, {
-                      left: '25%',
-                      duration: 0.5,
-                    });
-
-                    gsap.to(gif.current, {
-                      display: "unset",
-                    })
-                  }
-                }}
-                onMouseLeave={() => {
-                  if (title.current && gif.current) {
-                    gsap.to(title.current, {
-                      left: 0,
-                      duration: 0.5,
-                    })
-
-                    gsap.to(gif.current, {
-                      display: "none",
-                      duration: 0,
-                    })
-                  }
-                }}
-              >
-                Swazi Kunene
-              </h1>
-            </div>
+              Swazi Kunene
+            </h1>
           </Link>
 
           <h2 className="homepage__subtitle">Junior Frontend Developer</h2>
