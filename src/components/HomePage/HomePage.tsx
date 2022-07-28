@@ -9,6 +9,7 @@ export const HomePage: React.FC = React.memo(
   () => {
     let title = useRef<HTMLHeadingElement | null>(null);
     let container = useRef<HTMLDivElement | null>(null);
+    let gif = useRef<HTMLImageElement | null>(null);
 
     useEffect(() => {
       if (container.current) {
@@ -29,28 +30,45 @@ export const HomePage: React.FC = React.memo(
         <Particles />
         <div className="homepage__wrapper">
           <Link to="about" className="homepage__title-link">
-            <h1
-              ref={title}
-              className="homepage__title"
-              onMouseEnter={() => {
-                if (title.current) {
-                  gsap.to(title.current, {
-                    left: '25%',
-                    duration: 0.5,
-                  });
-                }
-              }}
-              onMouseLeave={() => {
-                if (title.current) {
-                  gsap.to(title.current, {
-                    left: 0,
-                    duration: 0.5,
-                  })
-                }
-              }}
-            >
-              Swazi Kunene
-            </h1>
+            <div className="homepage__title-container">
+              <img
+                ref={gif}
+                src={`${process.env.PUBLIC_URL}/images/tap-unscreen.gif`}
+                alt="d"
+                className="homepage__gif"
+              />
+              <h1
+                ref={title}
+                className="homepage__title"
+                onMouseEnter={() => {
+                  if (title.current && gif.current) {
+                    gsap.to(title.current, {
+                      left: '25%',
+                      duration: 0.5,
+                    });
+
+                    gsap.to(gif.current, {
+                      display: "unset",
+                    })
+                  }
+                }}
+                onMouseLeave={() => {
+                  if (title.current && gif.current) {
+                    gsap.to(title.current, {
+                      left: 0,
+                      duration: 0.5,
+                    })
+
+                    gsap.to(gif.current, {
+                      display: "none",
+                      duration: 0,
+                    })
+                  }
+                }}
+              >
+                Swazi Kunene
+              </h1>
+            </div>
           </Link>
 
           <h2 className="homepage__subtitle">Junior Frontend Developer</h2>

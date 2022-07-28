@@ -30,6 +30,18 @@
     color: $isabelline;
   }
 
+  &__gif {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-30deg);
+
+    display: none;
+
+    width: 42px;
+    height: 42px;
+  }
+
   &__title {
     position: relative;
     font-size: 2.5em;
@@ -45,6 +57,10 @@
 
     &--about {
       display: none;
+    }
+
+    &-container {
+      position: relative;
     }
 
     &-link {
