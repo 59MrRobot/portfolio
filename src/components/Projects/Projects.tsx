@@ -28,13 +28,13 @@ const projects = [
     name: 'Tic Tac Toe',
     type: "App",
     url: 'https://59mrrobot.github.io/tic-tac-toe/',
-    thumbnail: 'tictactoe.png',
+    thumbnail: 'tictactoe.PNG',
   },
   {
     name: 'Currency Converter',
     type: "App",
     url: 'https://59mrrobot.github.io/currency-converter/',
-    thumbnail: 'currency-converter.png',
+    thumbnail: 'currency-converter.PNG',
   },
 ];
 
