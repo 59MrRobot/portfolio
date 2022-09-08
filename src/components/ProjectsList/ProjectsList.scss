@@ -1,0 +1,33 @@
+.projects-list {
+  margin: 32px 0 0;
+  padding: 0;
+
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-content: center;
+  row-gap: 24px;
+
+  list-style: none;
+
+  @media (min-width: 768px) {
+    margin: 64px 0 0;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    column-gap: 32px;
+    margin: 0;
+  }
+
+  &__item {
+    width: max-content;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}

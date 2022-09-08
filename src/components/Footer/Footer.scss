@@ -1,0 +1,36 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+
+  padding: 0 0 12px;
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+
+    &:hover {
+      animation: bounce 1.5s linear infinite;
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
