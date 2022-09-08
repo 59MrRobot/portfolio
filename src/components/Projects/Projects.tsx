@@ -24,6 +24,18 @@ const projects = [
     url: 'https://59mrrobot.github.io/mybike-landing-page/',
     thumbnail: 'mybike.png',
   },
+  {
+    name: 'Tic Tac Toe',
+    type: "App",
+    url: 'https://59mrrobot.github.io/tic-tac-toe/',
+    thumbnail: 'tictactoe.png',
+  },
+  {
+    name: 'Currency Converter',
+    type: "App",
+    url: 'https://59mrrobot.github.io/currency-converter/',
+    thumbnail: 'currency-converter.png',
+  },
 ];
 
 export const Projects: React.FC = React.memo(

@@ -6,7 +6,7 @@
   padding: 16px 0;
 
   opacity: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 
   background-color: $raisin-black;
 
@@ -16,8 +16,7 @@
 
   &__wrapper {
     max-width: 1024px;
-    height: 100%;
-    margin: 0 auto;
+    margin: 24px auto;
     padding: 0 16px;
 
     @media (min-width: 768px) {
