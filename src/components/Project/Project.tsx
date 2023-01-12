@@ -9,8 +9,8 @@ interface Props {
 export const Project: React.FC<Props> = React.memo(
   ({ project }) => {
     let container = useRef<HTMLDivElement | null>(null);
-    let image = useRef<HTMLImageElement | null>(null);
     let title = useRef<HTMLHeadingElement | null>(null);
+    const isScreenSizeDesktop = window.matchMedia("(min-width: 1024px)").matches;
 
     useEffect(() => {
       if (container.current) {
@@ -21,6 +21,7 @@ export const Project: React.FC<Props> = React.memo(
             ease: Power3.easeOut,
           })
       }
+      
     }, []);
 
     return (
@@ -28,14 +29,7 @@ export const Project: React.FC<Props> = React.memo(
         className="project"
         ref={container}
         onMouseEnter={() => {
-          if (image.current && title.current && container.current) {
-            gsap.to(image.current, {
-              scale: 1.1,
-              top: "-25px",
-              left: "-25px",
-              boxShadow: "10px 10px 8px #888888",
-              duration: 0.5,
-            });
+          if (title.current && container.current && isScreenSizeDesktop) {
 
             gsap.to(title.current, {
               left: "50%",
@@ -44,21 +38,13 @@ export const Project: React.FC<Props> = React.memo(
             });
 
             gsap.to(container.current, {
-              boxShadow: "5px 5px 8px #000",
+              boxShadow: "10px 10px 8px #888888",
               duration: 0.5,
             });
           }
         }}
         onMouseLeave={() => {
-          if (image.current && title.current && container.current) {
-            gsap.to(image.current, {
-              scale: 1,
-              top: 0,
-              left: 0,
-              boxShadow: "0 0 0",
-              duration: 0.5,
-            });
-
+          if (title.current && container.current && isScreenSizeDesktop) {
             gsap.to(title.current, {
               left: 0,
               transform: "translateX(0)",
@@ -74,7 +60,6 @@ export const Project: React.FC<Props> = React.memo(
       >
         <img 
           src={`${process.env.PUBLIC_URL}/images/${project.thumbnail}`}
-          ref={image}
           alt="project thumbnail"
           className="project__image"
         />

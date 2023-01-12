@@ -64,32 +64,36 @@ export const Projects: React.FC = React.memo(
     }, []);
 
     return (
-      <div 
-        className="projects"
-        ref={container}
-      >
+      <>
         <Particles />
+
         <div 
-          className="projects__controls"
-          ref={controls}
+          className="projects"
+          ref={container}
         >
-          <Link to="/">
-            <img 
-              src={`${process.env.PUBLIC_URL}/images/home.svg`} 
-              alt="home icon"
-              className="home-icon"
-            />
-          </Link>
+          {/* <Particles /> */}
+          <div 
+            className="projects__controls"
+            ref={controls}
+          >
+            <Link to="/">
+              <img 
+                src={`${process.env.PUBLIC_URL}/images/home.svg`} 
+                alt="home icon"
+                className="home-icon"
+              />
+            </Link>
 
-          <h1 className="projects__title">Projects</h1>
+            <h1 className="projects__title">Projects</h1>
 
-          <div></div>
+            <div></div>
+          </div>
+
+          <div className="projects__wrapper">
+            <ProjectsList projects={projects} />
+          </div>
         </div>
-
-        <div className="projects__wrapper">
-          <ProjectsList projects={projects} />
-        </div>
-      </div>
+      </>
     );
   }
 );

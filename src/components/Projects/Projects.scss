@@ -8,7 +8,8 @@
   opacity: 0;
   overflow-x: hidden;
 
-  background-color: $raisin-black;
+  // background-color: $raisin-black;
+  background-color: transparent;
 
   @media (min-width: 1024px) {
     height: 100vh;
@@ -69,7 +70,5 @@
       font-family: "Poppins SemiBold";
       text-align: center;
     }
-
-    
   }
 }
