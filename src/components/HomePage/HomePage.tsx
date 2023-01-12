@@ -9,6 +9,7 @@ export const HomePage: React.FC = React.memo(
     let title = useRef<HTMLHeadingElement | null>(null);
     let container = useRef<HTMLDivElement | null>(null);
     let gif = useRef<HTMLImageElement | null>(null);
+    const isScreenSizeDesktop = window.matchMedia("(min-width: 1024px)").matches;
 
     useEffect(() => {
       if (container.current) {
@@ -18,6 +19,12 @@ export const HomePage: React.FC = React.memo(
             duration: 2,
             ease: Power3.easeOut,
           })
+      }
+
+      if (!isScreenSizeDesktop) {
+        gsap.to(gif.current, {
+          display: "unset",
+        })
       }
     }, []);
 
@@ -32,7 +39,7 @@ export const HomePage: React.FC = React.memo(
                 ref={title}
                 className="homepage__title"
                 onMouseEnter={() => {
-                  if (title.current && gif.current) {
+                  if (title.current && gif.current && isScreenSizeDesktop) {
                     gsap.to(title.current, {
                       left: '25%',
                       duration: 0.5,
@@ -44,7 +51,7 @@ export const HomePage: React.FC = React.memo(
                   }
                 }}
                 onMouseLeave={() => {
-                  if (title.current && gif.current) {
+                  if (title.current && gif.current && isScreenSizeDesktop) {
                     gsap.to(title.current, {
                       left: 0,
                       duration: 0.5,
