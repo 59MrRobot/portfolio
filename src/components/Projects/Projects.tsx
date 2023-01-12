@@ -3,7 +3,6 @@ import { ProjectsList } from '../ProjectsList';
 import './Projects.scss';
 import { Link } from 'react-router-dom';
 import { gsap, Power3 } from "gsap";
-import { Particles } from '../Particles';
 
 const projects = [
   {
@@ -64,14 +63,10 @@ export const Projects: React.FC = React.memo(
     }, []);
 
     return (
-      <>
-        <Particles />
-
-        <div 
+      <div 
           className="projects"
           ref={container}
         >
-          {/* <Particles /> */}
           <div 
             className="projects__controls"
             ref={controls}
@@ -93,7 +88,6 @@ export const Projects: React.FC = React.memo(
             <ProjectsList projects={projects} />
           </div>
         </div>
-      </>
     );
   }
 );

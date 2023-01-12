@@ -5,15 +5,6 @@
   width: calc(100vw - 17px);
   height: 100vh;
   overflow: hidden;
-  // z-index: -1;
-
-  &--projects {
-    z-index: unset;
-  }
-
-  &--about {
-    z-index: unset;
-  }
 }
 
 .particle {

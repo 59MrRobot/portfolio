@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import './About.scss';
 import { Link } from 'react-router-dom';
 import { gsap, Power0, Power3 } from "gsap";
-import { Particles } from '../Particles';
 
 const techStack = ['React', 'TypeScript', 'JavaScript', 'HTML', 'SCSS'];
 
@@ -67,7 +66,6 @@ export const About: React.FC = React.memo(
       <div
         className="about"
       >
-        <Particles />
         <div
           className="about__controls"
           ref={controls}

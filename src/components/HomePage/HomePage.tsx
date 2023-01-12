@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './HomePage.scss';
 import { gsap, Power3 } from "gsap";
 import { Footer } from '../Footer';
-import { Particles } from '../Particles';
 
 export const HomePage: React.FC = React.memo(
   () => {
@@ -23,14 +22,10 @@ export const HomePage: React.FC = React.memo(
     }, []);
 
     return (
-      <>
-        <Particles />
-
-        <div
+      <div
           className="homepage"
           ref={container}
         >
-          {/* <Particles /> */}
           <div className="homepage__wrapper">
             <Link to="about" className="homepage__title-link">
               <h1
@@ -83,8 +78,6 @@ export const HomePage: React.FC = React.memo(
 
           <Footer />
         </div>
-      </>
-      
     );
   }
 );
