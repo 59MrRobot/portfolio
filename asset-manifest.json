@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "./static/css/main.229c8a85.css",
-    "main.js": "./static/js/main.daefc480.js",
+    "main.js": "./static/js/main.591d53e2.js",
     "static/media/Poppins-Medium.ttf": "./static/media/Poppins-Medium.673ed42382ab264e0bf5.ttf",
     "static/media/Poppins-SemiBold.ttf": "./static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
     "static/media/Swazi_Kunene_CV.pdf": "./static/media/Swazi_Kunene_CV.b459bddbcb1a8149b3db.pdf",
     "static/media/EduVICWANTBeginner-VariableFont_wght.ttf": "./static/media/EduVICWANTBeginner-VariableFont_wght.6ba3877fd8693a74df58.ttf",
     "index.html": "./index.html",
     "main.229c8a85.css.map": "./static/css/main.229c8a85.css.map",
-    "main.daefc480.js.map": "./static/js/main.daefc480.js.map"
+    "main.591d53e2.js.map": "./static/js/main.591d53e2.js.map"
   },
   "entrypoints": [
     "static/css/main.229c8a85.css",
-    "static/js/main.daefc480.js"
+    "static/js/main.591d53e2.js"
   ]
 }
