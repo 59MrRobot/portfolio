@@ -26,7 +26,7 @@ export const HomePage: React.FC = React.memo(
           display: "unset",
         })
       }
-    }, []);
+    }, [isScreenSizeDesktop]);
 
     return (
       <div
