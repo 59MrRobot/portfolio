@@ -24,10 +24,10 @@ const projects = [
     thumbnail: 'mybike.png',
   },
   {
-    name: 'Tic Tac Toe',
+    name: 'Weather App',
     type: "App",
-    url: 'https://59mrrobot.github.io/tic-tac-toe/',
-    thumbnail: 'tictactoe.PNG',
+    url: 'https://59mrrobot.github.io/weather-app/',
+    thumbnail: 'weather-app.png',
   },
   {
     name: 'Currency Converter',
