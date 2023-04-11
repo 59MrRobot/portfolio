@@ -22,6 +22,14 @@ export const HomePage: React.FC = React.memo(
       }
     }, []);
 
+    useEffect(() => {
+      if (isScreenSizeDesktop) {
+        gsap.to(gif.current, {
+          display: "none",
+        })
+      }
+    }, [isScreenSizeDesktop]);
+
     return (
       <div
           className="homepage"
