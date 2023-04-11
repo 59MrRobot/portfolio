@@ -18,8 +18,12 @@
 
   transition: all 0.3s ease-in-out;
 
-  &:hover {
-    top: -10%;
+  @media (min-width: 768px) {
+    width: 350px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 325px;
   }
 
   &::before {
@@ -34,20 +38,22 @@
     border-radius: 20px;
     background: linear-gradient( 90.2deg, rgba(79,255,255,1) 0.3%, rgba(0,213,255,1) 99.8% );
     z-index: -1;
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
-  }
-
-  &:hover::before {
     opacity: 1;
-  }
+    transition: opacity 0.5s ease-out;
 
-  @media (min-width: 768px) {
-    width: 350px;
+    @media (min-width: 1024px) {
+      opacity: 0;
+    }
   }
 
   @media (min-width: 1024px) {
-    width: 325px;
+    &:hover {
+      top: -10%;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
   }
 
   &__image {

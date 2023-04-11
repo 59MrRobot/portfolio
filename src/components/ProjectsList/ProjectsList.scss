@@ -14,6 +14,10 @@
 
   @media (min-width: 768px) {
     margin: 64px 0 0;
+
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    column-gap: 32px;
   }
 
   @media (min-width: 1024px) {
