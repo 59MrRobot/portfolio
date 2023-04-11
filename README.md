@@ -12,9 +12,9 @@
 
 ## Screenshots:
 
-  ![App screenshot - homepage](homepage.PNG)
-  ![App screenshot - projects page](projects.PNG)
-  ![App screenshot - about me page](about-me.PNG)
+  ![App screenshot - homepage](homepage1.PNG)
+  ![App screenshot - projects page](projects1.PNG)
+  ![App screenshot - about me page](about-me1.PNG)
 
 ## Technologies:
 
