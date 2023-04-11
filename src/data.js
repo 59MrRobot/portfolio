@@ -21,13 +21,13 @@ export const projects = [
     name: 'E-commerce Site',
     type: "App",
     url: 'https://59mrrobot.github.io/ecommerce-site/',
-    thumbnail: 'ecommerce-site.PNG',
+    thumbnail: 'ecommerce-site.png',
   },
   {
     name: 'E-commerce Admin Site',
     type: "App",
     url: 'https://59mrrobot.github.io/ecommerce-admin/',
-    thumbnail: 'ecommerce-admin.PNG',
+    thumbnail: 'ecommerce-admin.png',
   },
   {
     name: 'Weather App',
