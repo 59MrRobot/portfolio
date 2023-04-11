@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "./static/css/main.a49dd213.css",
-    "main.js": "./static/js/main.1f64fa8d.js",
+    "main.js": "./static/js/main.9cd2a1cf.js",
     "static/media/Swazi_Kunene_CV.pdf": "./static/media/Swazi_Kunene_CV.f1503bc92dcf152253f2.pdf",
     "index.html": "./index.html",
     "main.a49dd213.css.map": "./static/css/main.a49dd213.css.map",
-    "main.1f64fa8d.js.map": "./static/js/main.1f64fa8d.js.map"
+    "main.9cd2a1cf.js.map": "./static/js/main.9cd2a1cf.js.map"
   },
   "entrypoints": [
     "static/css/main.a49dd213.css",
-    "static/js/main.1f64fa8d.js"
+    "static/js/main.9cd2a1cf.js"
   ]
 }
