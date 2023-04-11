@@ -1,5 +1,4 @@
 @import '../../styles/vars';
-@import '../../styles/fonts';
 
 .homepage {
   position: fixed;
@@ -23,24 +22,28 @@
 
     padding: 0 16px;
 
-    font-family: "Poppins Medium", sans-serif;
-
     color: $isabelline;
   }
 
   &__gif {
     transform: rotate(30deg);
 
-    display: none;
+    width: 24px;
+    height: 24px;
 
-    width: 42px;
-    height: 42px;
+    @media (min-width: 1024px) {
+      // display: none;
+
+      width: 42px;
+      height: 42px;
+    }
   }
 
   &__title {
     position: relative;
     font-size: 2.5em;
-    font-family: "Edu Vic", sans-serif;
+    font-weight: 100;
+    letter-spacing: 8px;
 
     @media (min-width: 768px) {
       font-size: 4em;
@@ -68,6 +71,8 @@
     margin: 0;
 
     font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 4px;
 
     @media (min-width: 768px) {
       font-size: 1.3em;
@@ -79,24 +84,14 @@
   }
 
   &__link {
-    margin-top: 16px;
-    padding: 8px 16px;
+    margin-top: 24px;
 
-    border: 2px solid $argentinian-blue;
-    border-radius: 20px;
+    border: 2px solid #E5E4E2;
 
-    font-family: "Poppins SemiBold", sans-serif;
-    background-color: $argentinian-blue;
-    color: $raisin-black;
     text-decoration: none;
-    text-transform: uppercase;
-
-    transition: transform 0.25s linear,
-      background-color 0.25s linear, 
-      color 0.25s linear, 
-      border 0.25s linear;
-
-
+    
+    font-weight: 700;
+    letter-spacing: 1px;
 
     @media (min-width: 768px) {
       margin-top: 24px;
@@ -116,14 +111,26 @@
       font-size: 1.5em;
 
       background-color: unset;
-      color: $argentinian-blue;
-
-      &:hover {
-        transform: scale(1.05);
-        background-color: $argentinian-blue;
-        color: $raisin-black;
-        border: 2px solid $raisin-black;
-      }
+      color: #E5E4E2;
     }
   }
+}
+
+.btn-grad {
+  background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }

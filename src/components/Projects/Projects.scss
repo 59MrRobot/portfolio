@@ -1,15 +1,13 @@
 @import '../../styles/vars';
-@import '../../styles/fonts';
 
 .projects {
   height: 100%;
   padding: 16px 0;
 
-  opacity: 0;
+  // opacity: 0;
   overflow-x: hidden;
 
-  // background-color: $raisin-black;
-  background-color: transparent;
+  // background-color: transparent;
 
   @media (min-width: 1024px) {
     height: 100vh;
@@ -47,10 +45,11 @@
 
   &__title {
     font-size: 2.5em;
-    font-family: "Edu Vic", sans-serif;
 
     color: $isabelline;
     text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 16px;
 
     @media (min-width: 768px) {
       font-size: 3em;
@@ -67,8 +66,11 @@
     margin-top: 16px;
   
     &-title {
-      font-family: "Poppins SemiBold";
       text-align: center;
     }
   }
+}
+
+.home-icon {
+  color: $bone;
 }

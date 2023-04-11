@@ -3,39 +3,8 @@ import { ProjectsList } from '../ProjectsList';
 import './Projects.scss';
 import { Link } from 'react-router-dom';
 import { gsap, Power3 } from "gsap";
-
-const projects = [
-  {
-    name: 'Wordle',
-    type: "App",
-    url: 'https://59mrrobot.github.io/wordle-project/',
-    thumbnail: 'wordle.png',
-  },
-  {
-    name: 'Kickstarter',
-    type: "Landing Page",
-    url: 'https://59mrrobot.github.io/kickstarter-landing-page/',
-    thumbnail: 'kickstarter.png',
-  },
-  {
-    name: 'MyBiKE',
-    type: "Landing Page",
-    url: 'https://59mrrobot.github.io/mybike-landing-page/',
-    thumbnail: 'mybike.png',
-  },
-  {
-    name: 'Weather App',
-    type: "App",
-    url: 'https://59mrrobot.github.io/weather-app/',
-    thumbnail: 'weather-app.png',
-  },
-  {
-    name: 'Currency Converter',
-    type: "App",
-    url: 'https://59mrrobot.github.io/currency-converter/',
-    thumbnail: 'currency-converter.PNG',
-  },
-];
+import { projects } from '../../data';
+import HomeIcon from '@mui/icons-material/Home';
 
 export const Projects: React.FC = React.memo(
   () => {
@@ -67,16 +36,12 @@ export const Projects: React.FC = React.memo(
           className="projects"
           ref={container}
         >
-          <div 
+          <div
             className="projects__controls"
             ref={controls}
           >
             <Link to="/">
-              <img 
-                src={`${process.env.PUBLIC_URL}/images/home.svg`} 
-                alt="home icon"
-                className="home-icon"
-              />
+              <HomeIcon fontSize='large' style={{ color: "#F5F1ED" }} />
             </Link>
 
             <h1 className="projects__title">Projects</h1>

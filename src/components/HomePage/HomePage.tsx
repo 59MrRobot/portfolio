@@ -13,18 +13,24 @@ export const HomePage: React.FC = React.memo(
 
     useEffect(() => {
       if (container.current) {
-        gsap.to(container.current, 
+        gsap.to(container.current,
           {
             opacity: 1,
             duration: 2,
             ease: Power3.easeOut,
           })
       }
+    }, []);
 
+    useEffect(() => {
       if (!isScreenSizeDesktop) {
         gsap.to(gif.current, {
           display: "unset",
-        })
+        });
+      } else {
+        gsap.to(gif.current, {
+          display: "none",
+        });
       }
     }, [isScreenSizeDesktop]);
 
@@ -77,7 +83,7 @@ export const HomePage: React.FC = React.memo(
 
             <Link 
               to="projects"
-              className="homepage__link"
+              className="homepage__link btn-grad"
             >
               Projects
             </Link>

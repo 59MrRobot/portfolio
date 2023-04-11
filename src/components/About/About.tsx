@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import './About.scss';
 import { Link } from 'react-router-dom';
 import { gsap, Power0, Power3 } from "gsap";
-
-const techStack = ['React', 'TypeScript', 'JavaScript', 'HTML', 'SCSS'];
+import HomeIcon from '@mui/icons-material/Home';
+import { techStack } from '../../data';
 
 export const About: React.FC = React.memo(
   () => {
@@ -66,16 +66,9 @@ export const About: React.FC = React.memo(
       <div
         className="about"
       >
-        <div
-          className="about__controls"
-          ref={controls}
-        >
+        <div className="about__controls" ref={controls}>
           <Link to="/">
-            <img 
-              src={`${process.env.PUBLIC_URL}/images/home.svg`} 
-              alt="home icon"
-              className="home-icon"
-            />
+            <HomeIcon fontSize='large' style={{ color: "#F5F1ED" }} />
           </Link>
 
           <h1 className="about__title">Who Am I?</h1>
@@ -84,25 +77,26 @@ export const About: React.FC = React.memo(
         </div>
 
         <div className="about__wrapper">
-          <ul 
-            className="about__tech"
-            ref={tech}
-          >
+          <ul className="about__tech" ref={tech}>
             {techStack.map(tech => {
               return (
                 <li key={tech}>
-                  {tech}
+                  <img
+                    src={`${process.env.PUBLIC_URL}/icons/${tech}.png`}
+                    alt={`${tech} icon`}
+                    className="about__tech-icon"
+                  />
                 </li>
               );
             })}
           </ul>
 
           <div className="about__text-container">
-            <p 
+            <p
               className="about__text about__text-large"
               ref={para1}
             >
-              Hi, I'm Swazi. I'm a Junior Frontend Developer with 6 months of practical experience in Frontend Development.
+              Hi, I'm Swazi. I'm a Junior Frontend Developer with about a year of practical experience in Frontend Development.
             </p>
 
             <p
@@ -116,14 +110,14 @@ export const About: React.FC = React.memo(
               className="about__text"
               ref={para3}
             >
-              I am confident in my abilities to create dynamic web pages. I'm familiar with responsive web design, cross-browser, SASS pre-processor and BEM methodology. I'm able to work with RESTful API's - be it fetching, updating, deleting or posting data on the server.
+              I am confident in my abilities to create dynamic web pages. I'm familiar with responsive web design, cross-browser, SASS pre-processor and BEM methodology. I'm able to work with RESTful API's - be it fetching, updating, deleting or posting data on the server. I also have experience in creating my own APIs using mongoDB and express.js.
             </p>
 
             <p
               className="about__text"
               ref={para4}
             >
-              I also have some practical experience in creating dynamic React web applications and working with Rendering Lists, Forms (lifting state up), Classes, Functional Components, Contexts and React Router.
+              I also have some practical experience in creating dynamic React web applications and working with Rendering Lists, Forms (lifting state up), Classes, Functional Components, Contexts and React Router. In addition, I have utilised redux/redux-persist in order to manage and centralize the state of my web applications.
             </p>
 
             <p
