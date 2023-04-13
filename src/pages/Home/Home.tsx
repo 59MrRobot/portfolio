@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import './HomePage.scss';
+import './Home.scss';
 import { gsap, Power3 } from "gsap";
-import { Footer } from '../Footer';
+import { Footer } from '../../components/Footer';
 
-export const HomePage: React.FC = React.memo(
+export const Home: React.FC = React.memo(
   () => {
     let title = useRef<HTMLHeadingElement | null>(null);
     let container = useRef<HTMLDivElement | null>(null);

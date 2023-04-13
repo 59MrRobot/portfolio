@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { ProjectsList } from '../ProjectsList';
+import { ProjectsList } from '../../components/ProjectsList';
 import './Projects.scss';
 import { Link } from 'react-router-dom';
 import { gsap, Power3 } from "gsap";

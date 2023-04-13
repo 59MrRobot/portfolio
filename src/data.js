@@ -39,7 +39,7 @@ export const projects = [
     name: 'Currency Converter',
     type: "App",
     url: 'https://59mrrobot.github.io/currency-converter/',
-    thumbnail: 'currency-converter.PNG',
+    thumbnail: 'currency-converter.png',
   },
 ];
 
