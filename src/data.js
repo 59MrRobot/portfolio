@@ -33,7 +33,7 @@ export const projects = [
     name: 'Weather App',
     type: "App",
     url: 'https://59mrrobot.github.io/weather-app/',
-    thumbnail: 'weather-app.png',
+    thumbnail: 'weather.png',
   },
   {
     name: 'Currency Converter',
