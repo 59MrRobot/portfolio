@@ -51,10 +51,12 @@
 
     text-transform: uppercase;
     font-weight: 100;
-    letter-spacing: 16px;
+    font-size: 2.5em;
+    letter-spacing: 8px;
 
     @media (min-width: 768px) {
       font-size: 3em;
+      letter-spacing: 16px;
     }
 
     @media (min-width: 1024px) {
