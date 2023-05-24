@@ -131,7 +131,7 @@ export const Work: React.FC = React.memo(
                 <h4 className="work__project-title">E-Commerce Admin Site</h4>
 
                 <p className="work__project-overview">
-                  This is an admin site, which serves as an extension of the e-commerce site. <span className="strong">Only admins can access it (kindly request login details from me)</span>
+                  This is an admin site, which serves as an extension of <span className="strong">the e-commerce site. kindly request login details from me.</span>
                 </p>
 
                 <p className="work__project-description">Web App</p>

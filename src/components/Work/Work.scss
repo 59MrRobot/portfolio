@@ -1,6 +1,14 @@
 .work {
   padding: 80px 110px 120px;
 
+  @media (max-width: 1024px) {
+    padding: 80px 24px 120px;
+  }
+
+  @media (max-width: 700px) {
+    padding: 80px 16px 120px;
+  }
+
   &__text {
     font-weight: 300;
     font-size: 40px;
@@ -10,6 +18,10 @@
 
     &--strong {
       color: #E3E4E6;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 24px;
     }
   }
 
@@ -26,10 +38,28 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 32px;
 
+    @media (max-width: 1024px) {
+      height: 400px;
+    }
+
+    @media (max-width: 700px) {
+      height: 300px;
+    }
+
     &-image {
-      height: 100%;
+      height: 490px;
       width: 100%;
       border-radius: 16px;
+
+      object-fit: fill;
+
+      @media (max-width: 1024px) {
+        height: 400px;
+      }
+
+      @media (max-width: 700px) {
+        height: 300px;
+      }
     }
 
     &-text {
@@ -47,6 +77,14 @@
       text-transform: uppercase;
 
       color: #E3E4E6;
+
+      @media (max-width: 1024px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 700px) {
+        font-size: 14px;
+      }
     }
 
     &-overview {
@@ -57,6 +95,15 @@
       line-height: 150%;
 
       color: #E3E4E68C;
+
+      @media (max-width: 1024px) {
+        font-size: 22px;
+      }
+
+      @media (max-width: 700px) {
+        margin-top: 12px;
+        font-size: 16px;
+      }
     }
 
     &-description {
@@ -67,6 +114,11 @@
       line-height: 150%;
 
       color: #E3E4E6;
+
+      @media (max-width: 700px) {
+        margin-top: 20px;
+        font-size: 16px;
+      }
     }
 
     &-link {
@@ -94,6 +146,11 @@
       color: #E3E4E6;
 
       text-decoration: none;
+
+      @media (max-width: 700px) {
+        margin-top: 28px;
+        font-size: 14px;
+      }
 
       &::before {
         position: absolute;

@@ -1,10 +1,22 @@
 .technology {
   padding: 80px 112px 130px;
 
+  @media (max-width: 1024px) {
+    padding: 80px 24px 130px;
+  }
+
+  @media (max-width: 700px) {
+    padding: 80px 16px 130px;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
     gap: 80px;
+
+    @media (max-width: 700px) {
+      gap: 40px;
+    }
   }
 
   &__text {
@@ -13,6 +25,14 @@
     line-height: 150%;
 
     color: #E3E4E68C;
+
+    @media (max-width: 1024px) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 24px;
+    }
 
     &--strong {
       color: #E3E4E6;
@@ -32,5 +52,13 @@
     height: 100px;
 
     color: #E3E4E68C;
+
+    @media (max-width: 1024px) {
+      height: 80px;
+    }
+
+    @media (max-width: 700px) {
+      height: 60px;
+    }
   }
 }

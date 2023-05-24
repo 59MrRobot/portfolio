@@ -12,7 +12,7 @@
   }
 
   &__text {
-    margin-top: 122px;
+    // margin-top: 122px;
     padding: 104px;
 
     font-weight: 300;
@@ -21,6 +21,14 @@
 
     color: #E3E4E68C;
     text-align: center;
+
+    @media (max-width: 1024px) {
+      font-size: 48px;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 40px;
+    }
   }
 
   &__down {
@@ -34,7 +42,7 @@
 }
 
 .navbar {
-  position: fixed;
+  // position: fixed;
   top: 0;
   width: 100%;
   padding: 34px 112px;
@@ -46,6 +54,14 @@
   color: #E3E4E6;
   background-color: #000;
 
+  @media (max-width: 1024px) {
+    padding: 34px 32px;
+  }
+
+  @media (max-width: 700px) {
+    padding: 34px 16px;
+  }
+
   &__logo {
     font-weight: 800;
     font-size: 24px;
@@ -56,6 +72,10 @@
     -webkit-text-fill-color: transparent;
 
     text-decoration: none;
+
+    @media (max-width: 700px) {
+      font-size: 20px;
+    }
   }
 
   &__list {
@@ -78,6 +98,10 @@
     text-transform: uppercase;
 
     transition: all 0.3s ease-in-out;
+
+    @media (max-width: 700px) {
+      font-size: 12px;
+    }
 
     &:hover {
       background: -webkit-linear-gradient(99.05deg, #BC3CD8 0.07%, #C54B8C 106.32%);
