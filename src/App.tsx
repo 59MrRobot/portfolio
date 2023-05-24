@@ -1,20 +1,23 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
 import './App.scss';
-import { About } from './pages/About';
-import { Home } from './pages/Home';
-import { Particles } from './components/Particles';
-import { Projects } from './pages/Projects';
+import { Home } from './components/Home';
+import { Technology } from './components/Technology';
+import { Work } from './components/Work';
+import { About } from './components/About';
+import { Footer } from './components/Footer';
 
 const App: React.FC = () => {
   return (
     <div className="app">
-      <Particles />
-      <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="projects" element={<Projects />} />
-          <Route path="about" element={<About />} />
-      </Routes>
+      <Home />
+
+      <Technology />
+
+      <Work />
+
+      <About />
+
+      <Footer />
     </div>
   );
 }

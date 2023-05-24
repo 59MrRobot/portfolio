@@ -1,0 +1,36 @@
+.technology {
+  padding: 80px 112px 130px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 150%;
+
+    color: #E3E4E68C;
+
+    &--strong {
+      color: #E3E4E6;
+    }
+  }
+
+  &__images {
+    padding: 16px 0;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    height: 100px;
+
+    color: #E3E4E68C;
+  }
+}

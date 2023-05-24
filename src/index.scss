@@ -1,25 +1,17 @@
 body,
 h1,
 h2,
-p {
+p,
+ul,
+li {
   margin: 0;
+  padding: 0;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.home-icon {
-  width: 24px;
-  height: 24px;
-
-  @media (min-width: 768px) {
-    width: 32px;
-    height: 32px;
-  }
-
-  @media (min-width: 1024px) {
-    width: 40px;
-    height: 40px;
-  }
+html {
+  scroll-behavior: smooth;
 }

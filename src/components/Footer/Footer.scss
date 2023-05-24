@@ -1,38 +1,86 @@
 .footer {
-  position: absolute;
-  bottom: 0;
+  padding: 80px 0 40px;
 
-  padding: 0 0 12px;
-  width: 100%;
+  color: #E3E4E68C;
 
   &__wrapper {
+    margin: 0 auto;
+    width: max-content;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 150%;
+
+
+    text-align: center;
+    letter-spacing: -0.02em;
+  }
+
+  &__text {
+    margin-top: 4px;
+
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+
+    text-align: center;
+  }
+
+  &__icons {
+    margin-top: 60px;
     display: flex;
-    justify-content: center;
-    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__icon {
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
 
-    @media (min-width: 1024px) {
+    display: inline-block;
+
+    cursor: pointer;
+
+    &--cv {
+      background-image: url("../../../public/images/cv.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+
       &:hover {
-        animation: bounce 1.5s linear infinite;
+        background-image: url("../../../public/images/cv-hover.svg");
       }
     }
-  }
-}
 
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
+    &--email {
+      background-image: url("../../../public/images/email.svg");
+      background-repeat: no-repeat;
+      background-position: center;
 
-  50% {
-    transform: translateY(-5px);
-  }
+      &:hover {
+        background-image: url("../../../public/images/email-hover.svg");
+      }
+    }
 
-  100% {
-    transform: translateY(0);
+    &--github {
+      background-image: url("../../../public/images/github.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &:hover {
+        background-image: url("../../../public/images/github-hover.svg");
+      }
+    }
+
+    &--linkedin {
+      background-image: url("../../../public/images/linkedin.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &:hover {
+        background-image: url("../../../public/images/linkedin-hover.svg");
+      }
+    }
   }
 }
