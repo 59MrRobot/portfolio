@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.892c572c.css",
-    "main.js": "./static/js/main.e21b9508.js",
+    "main.css": "./static/css/main.1feb50ab.css",
+    "main.js": "./static/js/main.ec12e244.js",
     "static/media/Swazi_Kunene_CV.pdf": "./static/media/Swazi_Kunene_CV.f1503bc92dcf152253f2.pdf",
     "static/media/cv.svg": "./static/media/cv.47d4b9c896b4063595f2.svg",
     "static/media/cv-hover.svg": "./static/media/cv-hover.cf7b201189d6d3a8d8a9.svg",
@@ -16,11 +16,11 @@
     "static/media/line.svg": "./static/media/line.1f5a31c227a9933ce025.svg",
     "static/media/chevron-down.svg": "./static/media/chevron-down.d1d85b13467309a35a14.svg",
     "static/media/arrow.svg": "./static/media/arrow.dd1484858e702fd654f6.svg",
-    "main.892c572c.css.map": "./static/css/main.892c572c.css.map",
-    "main.e21b9508.js.map": "./static/js/main.e21b9508.js.map"
+    "main.1feb50ab.css.map": "./static/css/main.1feb50ab.css.map",
+    "main.ec12e244.js.map": "./static/js/main.ec12e244.js.map"
   },
   "entrypoints": [
-    "static/css/main.892c572c.css",
-    "static/js/main.e21b9508.js"
+    "static/css/main.1feb50ab.css",
+    "static/js/main.ec12e244.js"
   ]
 }
