@@ -67,6 +67,11 @@
       height: 300px;
     }
 
+    @media (max-width: 700px) {
+      width: 150px;
+      height: 250px;
+    }
+
     &--1 {
       position: relative;
       top: 50%;

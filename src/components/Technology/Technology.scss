@@ -6,7 +6,7 @@
   }
 
   @media (max-width: 700px) {
-    padding: 80px 16px 130px;
+    padding: 80px 16px 50px;
   }
 
   &__wrapper {
@@ -46,6 +46,12 @@
   &__list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: 700px) {
+      justify-content: center;
+      gap: 16px;
+    }
   }
 
   &__icon {
