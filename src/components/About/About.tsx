@@ -11,7 +11,7 @@ export const About: React.FC = React.memo(
             <h3 className="about__title">A Bit About Me</h3>
 
             <p className="about__description">
-              I am a junior frontend developer who is passionate about creating <span className="strong">beautiful and joyful digital experiences. Besides development, I love music (including making my own), series and football.</span>
+              I am a junior frontend developer who is passionate about creating <span className="strong">beautiful and dynamic web applications. Besides development, I love music (including making my own), series and football.</span>
             </p>
           </div>
 
