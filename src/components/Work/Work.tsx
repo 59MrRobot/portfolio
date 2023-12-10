@@ -147,7 +147,7 @@ export const Work: React.FC = React.memo(
               </div>
             </div>
 
-            <div className="work__project">
+            {/* <div className="work__project">
               <div className="work__project-text">
                 <h4 className="work__project-title">Currency Converter</h4>
 
@@ -172,7 +172,7 @@ export const Work: React.FC = React.memo(
                 alt=""
                 className="work__project-image"
               />
-            </div>
+            </div> */}
 
             <div className="work__project">
               <img
