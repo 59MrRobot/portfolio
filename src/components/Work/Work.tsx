@@ -175,12 +175,6 @@ export const Work: React.FC = React.memo(
             </div> */}
 
             <div className="work__project">
-              <img
-                src={`${process.env.PUBLIC_URL}/images/weather.png`}
-                alt=""
-                className="work__project-image"
-              />
-
               <div className="work__project-text">
                 <h4 className="work__project-title">Weather App</h4>
 
@@ -199,6 +193,12 @@ export const Work: React.FC = React.memo(
                   View Work <span className="work__project-arrow"></span>
                 </a>
               </div>
+
+              <img
+                src={`${process.env.PUBLIC_URL}/images/weather.png`}
+                alt=""
+                className="work__project-image"
+              />
             </div>
           </div>
         </div>
